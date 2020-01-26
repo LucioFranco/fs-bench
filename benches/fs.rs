@@ -115,7 +115,7 @@ fn io_uring_write(ring: &mut IoUring, fd: RawFd, data: &[u8]) {
 
     // let cqes = ring.completion().available().collect::<Vec<_>>();
     for op in ring.completion().available() {
-        assert_eq!(op.result(), 12);
+        // assert_eq!(op.result(), 12);
     }
 
     // assert_eq!(cqes.len(), 256);
